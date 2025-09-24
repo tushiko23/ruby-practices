@@ -1,4 +1,4 @@
-numbers = [*1..20]
+numbers = (1..20)
 
 numbers.each do |number|
   if ( ( number % 5 ) == 0 ) && ( ( number % 3 ) == 0 )
