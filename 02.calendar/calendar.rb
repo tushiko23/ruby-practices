@@ -18,8 +18,8 @@ def show_calendar(year, month)
   print "   " * first_wday
 
   (first_day..last_day).each do |date|
-  print date.day.to_s.rjust(2) + " "
-  puts if date.saturday?
+		print date.day.to_s.rjust(2) + " "
+		puts if date.saturday?
 	end
 
 	puts	
@@ -31,11 +31,11 @@ options = {}
 opt = OptionParser.new
 
 opt.on("-m month",Integer) do |month|
-    options[:month] = month
+  options[:month] = month
 end    
 
 opt.on("-y year", Integer) do |year| 
-    options[:year] = year 
+  options[:year] = year 
 end     
  
 opt.parse!(ARGV)
@@ -46,8 +46,8 @@ year = options[:year] || Date.today.year
 
 # -m オプションに指定する引数が1~12以外の数値が入力された時にエラーメッセージの表示とプログラムの実行を終了するようにする
 if month < 1 || month >= 13
-    puts "-m オプションの指定は1~12のみ有効です"
-    exit
+	puts "-m オプションの指定は1~12のみ有効です"
+	exit
 end
 
 show_calendar(year,month)
