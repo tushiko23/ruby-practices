@@ -7,7 +7,7 @@ year = Date.today.year
 month = Date.today.month
 
 # program_calenderメソッドを定義。引数 year monthを指定。 
-def program_calendar(year, month)
+def show_calendar(year, month)
 
   # 変数から最初の月と最後の月を取得する 
   first_day = Date.new(year, month, 1)
